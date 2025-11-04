@@ -6,12 +6,20 @@ const puppeteer = require('puppeteer');
 
 
 
+    await page.goto('kerra.go.ke/job-vacancies/', {
+        timeout: 0, // disables timeout
+
+    });
+
+       await page.screenshot({ path: "screenshots/jobs.png" });
+
+
     await page.goto('https://www.myjobmag.co.ke/jobs', {
         timeout: 0, // disables timeout
 
     });
 
-    //    await page.screenshot({ path: "screenshots/jobs.png" });
+    
 
     const grabText = await page.evaluate(() => {
         const txtText = document.querySelector(".job-list .job-info .job-desc ");
@@ -24,3 +32,4 @@ const puppeteer = require('puppeteer');
 
     await browser.close();
 })();
+
