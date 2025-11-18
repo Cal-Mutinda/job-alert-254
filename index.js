@@ -7,7 +7,7 @@ const puppeteer = require('puppeteer');
 
 
     await page.goto('kerra.go.ke/job-vacancies/', {
-        timeout: 0, // disables timeout
+        timeout: 0, 
 
     });
 
@@ -15,7 +15,7 @@ const puppeteer = require('puppeteer');
 
 
     await page.goto('https://www.myjobmag.co.ke/jobs', {
-        timeout: 0, // disables timeout
+        timeout: 0, 
 
     });
 
@@ -32,4 +32,5 @@ const puppeteer = require('puppeteer');
 
     await browser.close();
 })();
+
 
